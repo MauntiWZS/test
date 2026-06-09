@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Структура сайта</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.5; margin: 20px; }
+    body { 
+        font-family: monospace;
+        margin: 0 auto;     /* выравнивание по центру */
+        width: 100%;         /* занимает всю доступную ширину */
+        font-family: Arial, sans-serif; 
+        line-height: 1.5; 
+        margin: 20px; }
     h1 {
-      font-size: 25px;   /* размер шрифта */
+      font-size: 35px;   /* размер шрифта */
       color: darkblue;
       margin-top: 0;   /* цвет текста */
       text-align: center; /* выравнивание */
     }
     h2 {
-      font-size: 20px;
+      font-size: 30px;
       margin-bottom: 0;
       margin-top: 0;
       color: darkgreen;
       margin-top: 1px;  /* отступ сверху */
     }
     h3 {
-      font-size: 14px;
+      font-size: 24px;
       margin-bottom: 0;
       margin-top: 0;
       color: black;
       margin-top: 1px;  /* отступ сверху */
     }
     h4 {
-      font-size: 13px;
+      font-size: 20px;
       margin-bottom: 0;
       margin-top: 0;
       color: rgb(69, 0, 0);
-      margin-top: 1px;  /* отступ сверху */
+      margin-top: 0px;  /* отступ сверху */
+    }
+    li {
+      font-size: 23px;
+      margin-top: 0;      /* убираем верхний отступ у абзаца */
     }
     p {
+      font-size: 25px;
       margin-top: 0;      /* убираем верхний отступ у абзаца */
     }
     span {
-      font-size: 13px;
+      font-size: 20px;
       font-weight: normal;   /* убираем жирность */
       color: rgb(69, 0, 0);
     }
@@ -53,7 +65,7 @@
     .modal-content {
       background: #fff;
       margin: 10% auto;
-      padding: 20px;
+      padding: 30px;
       width: 60%;
       border-radius: 8px;
     }
