@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Структура сайта</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.5; margin: 20px; }
+    h1 {
+      font-size: 25px;   /* размер шрифта */
+      color: darkblue;
+      margin-top: 0;   /* цвет текста */
+      text-align: center; /* выравнивание */
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 0;
+      margin-top: 0;
+      color: darkgreen;
+      margin-top: 1px;  /* отступ сверху */
+    }
+    h3 {
+      font-size: 14px;
+      margin-bottom: 0;
+      margin-top: 0;
+      color: black;
+      margin-top: 1px;  /* отступ сверху */
+    }
+    h4 {
+      font-size: 13px;
+      margin-bottom: 0;
+      margin-top: 0;
+      color: rgb(69, 0, 0);
+      margin-top: 1px;  /* отступ сверху */
+    }
+    p {
+      margin-top: 0;      /* убираем верхний отступ у абзаца */
+    }
+    span {
+      font-size: 13px;
+      font-weight: normal;   /* убираем жирность */
+      color: rgb(69, 0, 0);
+    }
+
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 60%;
+      border-radius: 8px;
+    }
+    .close {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<h1>Структура сайта</h1>
+<h2>1. Главная страница</h2>
+<h4>(все что будет отображаться на главной стр. сайта)</h4>
+<ul>
+  <li>Полоса вверху:</li>
+    <ul>
+        <li>Логотип магазина. <span>(можно сгенерировать ИИ по описанию)</span></li>
+        <li>Каталог товаров. <span>(кнопка с выпадающим списком)</span></li>
+        <li>Строка поиска товаров.</li>
+        <li>Личный кабинет <span>(кнопка)</span></li>
+        <li>Корзина <span>(кнопка)</span></li>
+    </ul>
+  <li>Замовлення за рецептоп <span>(кнопка)</span></li>
+  <li>Баннер с акциями. <span>Нужен?</span></li>
+  <li>Популярные товары. <span>Нужен?</span></li>
+  <li>Новинки.<span>Нужен?</span></li>
+  <li>Отзывы.<span>Думаю это надо</span></li>
+  <li>Подвал сайта: <span>(Нижняя строка)</span> </li>
+    <ul>Телефон, Email, Telegram/Viber, график работы, политика конфиденциальности, условия пользования, адрес</ul>
+</ul>
+
+<h2>2. Каталог <span>(окно с товарами, отдельная страница)</span></h2>
+<ul>
+    <li>банер вверхе тот-же что у главной.</li>
+    <li>Фильтры <span>(уже есть)</span></li>
+    <li>Сортировка товаров</li>
+    <li>Товары:</li>
+        <ul>
+            <li>Иконка</li>
+            <li>Название</li>
+            <li>Наличие</li>
+            <li>Цена</li>
+            <li>Кнопка "Купить"</li>
+        </ul>
+    <li>Подвал из главной.</li>
+</ul>
+
+<h2>3. Карточка товара <span>(отображение товара в отдельном окне)</span></h2>
+<ul>
+    <li>Фото товара</li>
+    <li>Галерея.</li>
+    <li>Название. + Артикул</li>
+    <li>Цена. + Наличие</li>
+    <li>Описание.</li>
+    <li>Характеристики.</li>
+    <li>Кнопка «Купить».</li>
+    <li>Отзывы.</li>
+</ul>
+
+<h2>4. Корзина</h2>
+<ul>
+    <li>Список товаров.</li>
+    <li>Изменение количества.</li>
+    <li>Удаление товара.</li>
+    <li>Подсчёт общей суммы.</li>
+</ul>
+
+<h2>5. Оформление заказа</h2>
+<ul>
+    <li>Имя и фамилия покупателя.</li>
+    <li>Телефон.</li>
+    <li>Email. <span>(Необязательное поле)</span></li>
+    <li>Выбор способа доставки.</li>
+    <li>Выбор способа оплаты.</li>
+    <li>Подтверждение заказа.</li>
+</ul>
+
+<h2>6. Личный кабинет <span>(можно выпадающим окном с боку)</span></h2>
+<ul>
+    <li>Регистрация.</li>
+    <li>Вход.</li>
+    <li>История заказов.</li>
+    <li>Редактирование профиля.</li>
+</ul>
+
+<h2>7. Контакты <span>(для подвала)</span></h2>
+<ul>
+    <li>Телефон,</li>
+    <li>Email,</li>
+    <li>
+        Форма обратной связи
+        <button id="openModal">Справка</button>
+    </li>
+    <li>Карта. <span>картинка физического адреса (не обязательно)</span></li>
+</ul>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Форма обратной связи</h3>
+    <p>Это специальный раздел, где посетитель может оставить сообщение владельцам сайта. Обычно она выглядит как набор полей:</p>
+    <ul>
+      <li>Имя — чтобы знать, кто пишет</li>
+      <li>Email или телефон — чтобы можно было ответить</li>
+      <li>Сообщение — собственно текст обращения</li>
+      <li>Иногда добавляют тему или капчу для защиты от спама</li>
+    </ul>
+    <p>Смысл формы: пользователь пишет вопрос, предложение или жалобу, а сайт отправляет эти данные владельцу (обычно на почту или в базу данных).</p>
+  </div>
+</div>
+
+<h2>8. Админ-панель</h2>
+<ul>
+    <li>Добавление товаров.</li>
+    <li>Редактирование товаров.</li>
+    <li>Удаление товаров.</li>
+    <li>Просмотр заказов.</li>
+    <li>Изменение статуса заказа.</li>
+</ul>
+
+<h2>9. Оплата</h2>
+<ul>
+    <li>Онлайн-оплата <span>банковской картой, pay (надо уточнить конкретный сервис:LiqPay, WayForPay, Fondy...)</span></li>
+    <li>Наложенный платёж.</li>
+</ul>
+<p>Онлайн-оплата (LiqPay, WayForPay, Fondy), наложенный платёж.</p>
+
+<h2>10. Доставка</h2>
+<ul>
+    <li>Новая Почта.</li>
+    <li>Укрпочта. (если надо)</li>
+</ul>
+<p>Новая Почта, Укрпочта, самовывоз.</p>
+
+<script>
+  const modal = document.getElementById("myModal");
+  const btn = document.getElementById("openModal");
+  const span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = () => modal.style.display = "block";
+  span.onclick = () => modal.style.display = "none";
+  window.onclick = (event) => {
+    if (event.target == modal) modal.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
